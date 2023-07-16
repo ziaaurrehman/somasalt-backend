@@ -1,0 +1,20 @@
+@import "../../../styles/variables.module.scss";
+
+.about {
+  margin-top: 50px;
+  padding: 0px 50px 0px 0px;
+  @media (max-width: map-get($breakpoints, md)) {
+    padding: 0%;
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 40px;
+  margin-top: 40px;
+
+  @media (max-width: map-get($breakpoints, md)) {
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+  }
+}

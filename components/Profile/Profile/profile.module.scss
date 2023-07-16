@@ -1,0 +1,39 @@
+@import "../../../styles/variables.module.scss";
+
+.main {
+  background: $primary-7;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  // border: 1px solid #000;
+
+  &_info {
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px 10px;
+    // border: 1px solid #000;
+
+    &_question {
+      display: block;
+      @media (max-width: map-get($breakpoints, lg)) {
+        display: none;
+      }
+    }
+  }
+  &_card {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px 15px;
+    margin-top: 40px;
+    @media (max-width: map-get($breakpoints, sm)) {
+      flex-direction: column;
+    }
+  }
+  &_video {
+    display: none;
+    @media (max-width: map-get($breakpoints, lg)) {
+      display: block;
+    }
+  }
+}

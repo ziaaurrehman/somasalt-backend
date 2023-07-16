@@ -1,0 +1,70 @@
+@import "../../../styles/variables.module.scss";
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // border: 1px solid #000;
+  &_navbarHeading {
+    font-size: $font-md;
+    line-height: 42px;
+    color: $primary-2;
+    font-weight: map-get($font-weights, semibold);
+    @media (max-width: map-get($breakpoints, md)) {
+      font-size: $font-xsm;
+    }
+  }
+
+  &_icons {
+    display: flex;
+    @media (max-width: map-get($breakpoints, md)) {
+      display: none;
+    }
+
+    &_para {
+      padding: 0px 0px 0px 30px;
+      color: $primary-5;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  &_menu {
+    @media (max-width: map-get($breakpoints, xxxl)) {
+      display: none;
+    }
+    @media (max-width: map-get($breakpoints, lg)) {
+      display: none;
+    }
+    @media (max-width: map-get($breakpoints, md)) {
+      display: block;
+    }
+    &_para {
+      padding: 0 20px;
+      color: $primary-5;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+.miniNav {
+  position: absolute;
+  top: 0%;
+  z-index: 5;
+  @media (max-width: map-get($breakpoints,xl)) {
+    display: none;
+  }
+  @media (max-width: map-get($breakpoints,md)) {
+    display: block;
+    right: 2%;
+    top: 100%;
+  }
+  @media (max-width: map-get($breakpoints,sm)) {
+    right: 5%;
+  }
+}
+.hide {
+  display: none;
+}

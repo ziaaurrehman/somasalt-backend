@@ -1,0 +1,26 @@
+@import "../../../styles/variables.module.scss";
+
+.about {
+  width: 100%;
+  margin-top: 50px;
+  // border: 1px solid #000;
+  @media (max-width: map-get($breakpoints, md)) {
+    padding: 0%;
+  }
+}
+.cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  // border: 1px solid #000;
+
+  @media (max-width: map-get($breakpoints, md)) {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  @media (max-width: map-get($breakpoints,sm)) {
+    margin-top: 20px;
+  }
+}

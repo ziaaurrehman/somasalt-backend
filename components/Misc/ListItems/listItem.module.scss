@@ -1,0 +1,20 @@
+@import '../../../styles/variables.module.scss';
+
+
+.listStyle{
+    display: flex;
+    align-items: center;
+    // border: 1px solid #000;
+    justify-content: space-between;
+    
+    @media (max-width: map-get($breakpoints, md)) {
+        display: none;
+    } 
+
+    &_itemList{
+        font-size: $font-xsm;
+        line-height: 22px;
+        font-weight: map-get($font-weights, regular );
+        padding: 0 10px;
+    }
+}

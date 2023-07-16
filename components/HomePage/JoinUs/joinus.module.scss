@@ -1,0 +1,67 @@
+@import "../../../styles/variables.module.scss";
+
+.join {
+  display: flex;
+  margin: 60px 0%;
+  justify-content: space-evenly;
+  // border: 1px solid #000;
+  height: 500px;
+  @media (max-width: map-get($breakpoints, md)) {
+    flex-direction: column;
+    height: 800px;
+  }
+  @media (max-width: map-get($breakpoints, sm)) {
+    margin-top: 0px;
+    justify-content: center;
+    height: auto;
+  }
+
+  &_play {
+    width: 52%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    @media (max-width: map-get($breakpoints, xl)) {
+      width: 49%;
+    }
+    @media (max-width: map-get($breakpoints, md)) {
+      width: 100%;
+      order: 2;
+      margin-top: 10px;
+    }
+    @media (max-width: map-get($breakpoints, md)) {
+     
+      margin-top: 20px;
+    }
+  }
+
+  &_textDiv {
+    width: 36%;
+    height: 100%;
+    display: flex;
+    // border: 1px solid #000;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: map-get($breakpoints, lg)) {
+      width: 50%;
+      padding-left: 50px;
+    }
+    @media (max-width: map-get($breakpoints, md)) {
+      align-items: center;
+      width: 100%;
+      order: 1;
+    }
+    @media (max-width: map-get($breakpoints, sm)) {
+      align-items: flex-start;
+      // border: 1px solid #000;
+      height: auto;
+      padding: 0%;
+    }
+
+    button {
+      margin-top: 15px;
+    }
+  }
+}

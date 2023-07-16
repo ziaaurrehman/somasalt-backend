@@ -1,0 +1,29 @@
+@import "../../../styles/variables.module.scss";
+
+.customCheckbox {
+  // appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #d2305e;
+  background: $primary;
+  border-radius: 4px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:checked::before {
+    content: "\2713";
+    position: absolute;
+    top: -4px;
+    left: 0px;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.checkboxLabel {
+  margin-left: 8px;
+}

@@ -1,0 +1,58 @@
+@import "../../../styles/variables.module.scss";
+
+.event {
+  max-width: 100%;
+  height: 352px;
+  border-radius: 15px;
+  margin-top: 30px;
+  background: white;
+  padding: 10px;
+  background-color: whites;
+  // border: 1px solid #000;
+  @media (max-width: map-get($breakpoints, md)) {
+    height: auto;
+    width: auto;
+  }
+
+  &_feed {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 5px;
+    @media (max-width: map-get($breakpoints, md)) {
+      grid-template-columns: 100%;
+    }
+
+    &_feedCard {
+      width: 258px;
+      //   border: 1px solid #000;
+      font-family: "Montserrat";
+      @media (max-width: map-get($breakpoints, md)) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        img {
+          margin: 15px 0px;
+        }
+      }
+      @media (max-width: map-get($breakpoints, xsm2)) {
+        align-items: flex-start;
+        padding: 10px 20px;
+        margin-top: 0px;
+        // border: 1px solid #000;
+        img {
+          margin: 0px;
+        }
+      }
+      @media (max-width: map-get($breakpoints, sm)) {
+        margin-top: 0px;
+        img {
+          margin: 0px;
+        }
+      }
+      // border: 1px solid #000;
+    }
+  }
+}
