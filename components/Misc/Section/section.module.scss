@@ -1,0 +1,29 @@
+@import "../../../styles/variables.module.scss";
+
+.section {
+  position: relative;
+  // border: 1px solid #000;
+  @media (max-width: map-get($breakpoints, xxxl)) {
+    padding: 1.125rem 6rem !important;
+  }
+
+  @media (max-width: map-get($breakpoints, xxl)) {
+    padding: 1.125rem 5rem;
+  }
+
+  @media (max-width: map-get($breakpoints, xl)) {
+    padding: 1.125rem 5rem;
+  }
+  @media (max-width: map-get($breakpoints, lg)) {
+    padding: 1.125rem 2rem;
+  }
+  // @media (max-width: map-get($breakpoints, xl)) {
+  //     padding: 1.125rem 3rem;
+  // }
+  @media (max-width: map-get($breakpoints, md)) {
+    padding: 1rem 2rem;
+  }
+  @media (max-width: map-get($breakpoints, xs)) {
+    padding: 1rem 2rem;
+  }
+}

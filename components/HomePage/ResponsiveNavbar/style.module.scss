@@ -1,0 +1,39 @@
+@import "../../../styles/variables.module.scss";
+
+.miniBar {
+  width: 244px;
+  height: 220px;
+  // border: 1px solid #000;
+  background: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+
+  &_menu {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+
+    li {
+      padding: 0px 15px;
+      font-size: $font-xxsm;
+      line-height: 34px;
+      color: #000;
+      &:hover {
+        background: $primary-8;
+        color: $primary;
+      }
+    }
+  }
+  &_icons {
+    display: flex;
+    justify-content: space-between;
+
+    &_para {
+      padding: 0 20px;
+      color: $primary-5;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../../../styles/variables.module.scss";
+
+.dashboard {
+  background-color: $primary-7;
+  padding: 0px 60px;
+  display: flex;
+  // border: 1px solid #000;
+  @media (max-width: map-get($breakpoints, lg)) {
+    padding: 0px 10px;
+    justify-content: space-between;
+  }
+  @media (max-width: map-get($breakpoints, md)) {
+    padding: 0px;
+    align-items: center;
+  }
+
+  &_main {
+    width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    // border: 1px solid #000;
+    @media (max-width: map-get($breakpoints, lg)) {
+      padding: 0px;
+      width: 88%;
+      padding: 0px 30px;
+    }
+    @media (max-width: map-get($breakpoints, md)) {
+      width: 100%;
+      padding: 30px;
+      margin: 0px;
+    }
+
+    &_follower {
+      width: 100%;
+      margin-top: 40px;
+      display: grid;
+      // border: 1px solid #000;
+      grid-template-columns: repeat(4, 25%);
+      grid-gap: 0px 5px;
+
+      @media (max-width: map-get($breakpoints, md)) {
+        grid-template-columns: repeat(2, 48%);
+        grid-gap: 20px !important;
+      }
+      @media (max-width: map-get($breakpoints, lg)) {
+        grid-gap: 0px 10px;
+      }
+    }
+  }
+}
+.group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px 10px;
+  @media (max-width: map-get($breakpoints,lg)) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

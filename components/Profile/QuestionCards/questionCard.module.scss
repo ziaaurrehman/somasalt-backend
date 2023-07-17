@@ -1,0 +1,30 @@
+@import "../../../styles/variables.module.scss";
+
+.question {
+  height: 189px;
+  width: 352px;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid white;
+  background: transparent;
+  // display: none;
+  @media (max-width: map-get($breakpoints, lg)) {
+    width: 330px;
+    height: auto;
+    // padding: 25px 20px;
+  }
+  @media (max-width: map-get($breakpoints, sm)) {
+    width: auto;
+    margin-top: 15px;
+  }
+
+  h2 {
+    color: #000;
+  }
+}
+.question:hover {
+  background: white;
+  h2 {
+    color: $primary;
+  }
+}

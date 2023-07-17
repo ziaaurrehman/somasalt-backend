@@ -1,0 +1,301 @@
+@import "../../../styles/variables.module.scss";
+
+.heroSection {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  // border: 1px solid #000;
+  @media (max-width: map-get($breakpoints, xxxl)) {
+    padding: 3rem 6rem;
+  }
+
+  @media (max-width: map-get($breakpoints, xxl)) {
+    padding: 1.125rem 5rem;
+  }
+
+  @media (max-width: map-get($breakpoints, xl)) {
+    padding: 1.125rem 5rem;
+  }
+  @media (max-width: map-get($breakpoints, lg)) {
+    padding: 1.125rem 2rem;
+  }
+
+  @media (max-width: map-get($breakpoints, md)) {
+    padding: 1rem 2rem;
+  }
+  @media (max-width: map-get($breakpoints, xs)) {
+    padding: 1rem 2rem;
+  }
+  backdrop-filter: blur(187.5px);
+  background-image: url("/assets/heromain.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.container {
+  position: relative;
+  height: 700px;
+  // border: 1px solid #000;
+  @media (max-width: map-get($breakpoints, md)) {
+    height: 630px;
+  }
+  @media (max-width: map-get($breakpoints, xs2)) {
+    height: 500px;
+  }
+
+  &_main {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    // border: 1px solid #000;
+    justify-content: space-between;
+    @media (max-width: map-get($breakpoints, md)) {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &_textSection {
+      width: 45%;
+      height: 600px;
+      display: flex;
+      // border: 1px solid #000;
+      flex-direction: column;
+      justify-content: center;
+      @media (max-width: map-get($breakpoints, md)) {
+        align-items: center;
+        height: 300px;
+        width: 100%;
+      }
+      @media (max-width: map-get($breakpoints, sm)) {
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 150px;
+      }
+
+      &_headingDiv {
+        position: relative;
+        height: 250px;
+        width: 552px;
+        display: block;
+        @media (max-width: map-get($breakpoints, md)) {
+          width: 400px;
+        }
+        @media (max-width: map-get($breakpoints, sm)) {
+          display: none;
+        }
+
+        &_heading {
+          width: 100%;
+          position: absolute;
+          @media (max-width: map-get($breakpoints, md)) {
+            left: 10%;
+          }
+
+          h1 {
+            font-size: $font-lg;
+            font-weight: map-get($font-weights, bold);
+            line-height: 76px;
+            color: $primary-2;
+            @media (max-width: map-get($breakpoints, md)) {
+              font-size: $font-md;
+            }
+          }
+          span {
+            color: $primary-5;
+          }
+        }
+
+        &_headingIcon {
+          position: absolute;
+          left: 50%;
+          top: 15px;
+          @media (max-width: map-get($breakpoints, md)) {
+            left: 65%;
+          }
+        }
+      }
+    }
+
+    &_image {
+      height: 600px;
+      display: flex;
+      justify-content: flex-start;
+      // border: 1px solid #c41919;
+
+      @media (max-width: map-get($breakpoints, md)) {
+        height: 400px !important;
+        width: 100%;
+        justify-content: flex-end;
+      }
+
+      @media (max-width: map-get($breakpoints, xs2)) {
+        height: 300px;
+      }
+
+      &_frame {
+        display: flex;
+        justify-content: flex-end;
+        @media (max-width: map-get($breakpoints, xxxl)) {
+          display: block;
+        }
+        @media (max-width: map-get($breakpoints, xl)) {
+          display: flex;
+        }
+        @media (max-width: map-get($breakpoints, lg)) {
+          display: flex;
+        }
+        @media (max-width: map-get($breakpoints, md)) {
+          height: 400px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+        @media (max-width: map-get($breakpoints, xs2)) {
+          height: 200px !important;
+        }
+
+        img {
+          height: 100%;
+        }
+
+        @media (max-width: map-get($breakpoints, md)) {
+          height: 300px !important;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  &_upperDiv {
+    position: absolute;
+    left: 30%;
+    width: 400px;
+    // border: 1px solid #000;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: map-get($breakpoints, lg)) {
+      display: none;
+    }
+
+    &_arrow {
+      height: 210px;
+      padding-top: 10px;
+      display: flex;
+      justify-content: flex-start;
+      // border: 1px solid #000;
+      align-items: center;
+      @media (max-width: map-get($breakpoints, lg)) {
+        margin-left: 70px;
+      }
+    }
+    &_halfCircle {
+      height: 210px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      // border: 1px solid #000;
+      align-items: center;
+    }
+
+    &_connect {
+      width: 326px;
+      height: 159px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.05)
+      );
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7.5px);
+      border-top-right-radius: 50px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}
+.pin1 {
+  display: block;
+  @media (max-width: map-get($breakpoints, md)) {
+    display: none;
+  }
+}
+.pin2 {
+  display: none;
+  @media (max-width: map-get($breakpoints, md)) {
+    display: block;
+  }
+}
+.heading2 {
+  width: 300px;
+  height: 100px !important;
+  display: none;
+  position: relative;
+  top: 20px;
+  // border: 1px solid #000;
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    display: block;
+    width: 100%;
+  }
+  &_heading {
+    width: 90%;
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    // border: 1px solid #000;
+    @media (max-width: map-get($breakpoints, sm)) {
+      display: block;
+      width: 100%;
+      left: 0%;
+    }
+
+    h1 {
+      // border: 1px solid #000;
+      text-align: left;
+      font-size: $font-sm;
+      font-weight: map-get($font-weights, bold);
+      line-height: 32px;
+      color: $primary-2;
+      span {
+        color: #000;
+      }
+    }
+  }
+  &_headingIcon {
+    // border: 1px solid #000;
+    display: inline-block;
+    position: absolute;
+  }
+  img {
+    margin: 60px 0px 0px 75px;
+  }
+}
+.image1 {
+  display: block;
+  margin-top: 60px;
+  @media (max-width: map-get($breakpoints,md)) {
+    display: none;
+  }
+}
+.image2 {
+  display: none;
+  @media (max-width: map-get($breakpoints, md)) {
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: map-get($breakpoints, sm)) {
+    justify-content: center;
+    align-items: center;
+    margin-left: -55px;
+  }
+  @media (max-width: map-get($breakpoints, xs2)) {
+    margin-left: -28px;
+  }
+}

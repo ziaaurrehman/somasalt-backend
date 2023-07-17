@@ -1,0 +1,29 @@
+@import "../../../styles/variables.module.scss";
+
+.card {
+  height: 134px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 5px 20px;
+  border: 2px solid white;
+  @media (max-width: map-get($breakpoints, md)) {
+    width: 100%;
+  }
+
+  &:hover {
+    background: white;
+  }
+
+  &_dot {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+.card:hover h2 {
+  color: $primary;
+}

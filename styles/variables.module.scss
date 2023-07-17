@@ -1,0 +1,57 @@
+// Grid Breakpoints
+$breakpoints: (
+  xs2: 375px,
+  xs: 428px,
+  xsm2: 450px,
+  xsm: 480px,
+  sm: 576px,
+  md: 768px,
+  // md2: 900px,
+  lg: 1024px,
+  // xl: 1200px,
+  // xxl: 1320px,
+  xl: 1440px,
+  xxl: 1600px,
+  xxxl: 1920px,
+);
+
+// layout
+$containerPadding: 1.25rem;
+$container: calc(1410px - $containerPadding);
+
+// fonts
+$font-2: "Ubuntu", sans-serif;
+@font-face {
+  font-family: "Montserrat";
+  src: url("/public/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+// colors
+$primary: #d2305e;
+$primary-2: #643969;
+$primary-3: #ffce76;
+$primary-4: #eeeeee;
+$primary-5: #232323;
+$primary-6: #c7c4c4;
+$primary-7: #f4f4f4;
+$primary-8: rgba(210, 48, 94, 0.05);
+
+//font weight
+$font-weights: (
+  "regular": "400",
+  "meduim": "500",
+  "semibold": "600",
+  "bold": "700",
+);
+
+//font size
+$font-xxssm: 0.5rem; //8px
+$font-ten: 0.625rem; //10px
+$font-xxsm: 0.75rem; //12px
+$font-xsssm: 0.875rem; //14px
+$font-xssm: 1rem; //16px
+$font-xsm: 1.125rem; //18px
+$font-sm: 1.5rem; //24px
+$font-md: 2.25rem; //36px
+$font-lg: 2.875rem; //46px
+$font-xl: 4.125rem; //45px

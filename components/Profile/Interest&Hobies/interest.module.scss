@@ -1,0 +1,51 @@
+@import "../../../styles/variables.module.scss";
+
+.question {
+  height: 189px;
+  width: 352px;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid white;
+  background: transparent;
+  @media (max-width: map-get($breakpoints, lg)) {
+    width: auto;
+    height: auto;
+  }
+  @media (max-width: map-get($breakpoints, sm)) {
+    margin-top: 15px;
+  }
+
+  h2 {
+    color: #000;
+  }
+  &_interest {
+    width: 100%;
+    margin-top: 20px;
+
+    li {
+      height: auto;
+      background: $primary-8;
+      display: inline-block;
+      border-radius: 55px;
+      padding: 5px 10px;
+      color: black;
+      margin: 10px;
+      @media (max-width: map-get($breakpoints, lg)) {
+        margin: 5px;
+      }
+      @media (max-width: map-get($breakpoints, sm)) {
+        margin: 5px 15px;
+        font-size: $font-xxsm;
+      }
+      @media (max-width: map-get($breakpoints, xs2)) {
+        margin: 5px;
+      }
+    }
+  }
+}
+.question:hover {
+  background: white;
+  h2 {
+    color: $primary;
+  }
+}

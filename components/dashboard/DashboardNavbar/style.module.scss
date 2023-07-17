@@ -1,0 +1,61 @@
+@import "../../../styles/variables.module.scss";
+
+.dashboard {
+  // border: 1px solid #000;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+  position: relative;
+
+  &_icons {
+    width: 50px;
+    display: flex;
+    // border: 1px solid #000;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: map-get($breakpoints, md)) {
+      width: 35px;
+    }
+
+    p {
+      color: $primary;
+    }
+  }
+}
+.icon1 {
+  display: block;
+  @media (max-width: map-get($breakpoints, md)) {
+    display: none;
+  }
+}
+.logo {
+  display: none;
+  @media (max-width: map-get($breakpoints, md)) {
+    display: block;
+  }
+}
+.miniNav {
+  position: absolute;
+  left: 63.4%;
+  top: 100%;
+  @media (max-width: map-get($breakpoints, xl)) {
+    display: none;
+  }
+  @media (max-width: map-get($breakpoints, md)) {
+    display: block;
+  }
+
+  @media (max-width: map-get($breakpoints, sm)) {
+    left: 29%;
+  }
+  @media (max-width: map-get($breakpoints, xs)) {
+    left: 23%;
+  }
+  @media (max-width: map-get($breakpoints, xs2)) {
+    left: 18%;
+  }
+}
+.hide {
+  display: none;
+}
