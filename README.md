@@ -1,5 +1,1 @@
 # somasalt-backend
-
-# NextJS
-
-# xyx
